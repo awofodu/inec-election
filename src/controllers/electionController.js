@@ -45,7 +45,8 @@ const getAllPollingUnits = async (req, res) => {
 
         res.status(200).send(pollingUnits)
     }catch(error){
-        throw new CustomError.BadRequestError("Something Went Wrong")
+        // throw new CustomError.BadRequestError("Something Went Wrong")
+        console.log(error)
     }
 }
 
