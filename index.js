@@ -47,11 +47,10 @@ if(process.env.NODE_ENV === 'production'){
 }
 
 const PORT = process.env.SERVER_PORT || 5000
-const HOST = process.env.SERVER_HOST || '127.0.0.1'
 
 const start = () => {
     try {
-        app.listen(PORT, HOST, () => console.log(`server started on http://${HOST}:${PORT}`))
+        app.listen(PORT, () => console.log(`server started on port ${PORT}`))
     } catch (error) {
         console.log(error)
     }
