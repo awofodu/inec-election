@@ -35,6 +35,17 @@ app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 /** Middleware Ends here */
 
+// Handle production
+if(process.env.NODE_ENV === 'production'){
+    // Static folder
+    app.use(express.static(__dirname + '/public/'));
+
+    // Handle SPA
+    app.get(/.*/, (req, res) => {
+        res.sendFile(__dirname + '/public/index.html')
+    }); // It refers to any route at all
+}
+
 const PORT = process.env.SERVER_PORT || 5000
 const HOST = process.env.SERVER_HOST || '127.0.0.1'
 
