@@ -50,7 +50,7 @@ const PORT = process.env.SERVER_PORT || 5000
 
 const start = () => {
     try {
-        app.listen(PORT, () => console.log(`server started on port ${PORT}`))
+        app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
     } catch (error) {
         console.log(error)
     }
