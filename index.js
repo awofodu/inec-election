@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 const cors = require('cors')
 const express = require('express')
 const fileUpload = require('express-fileupload');
-dotenv.config()
+// dotenv.config()
 require('express-async-errors');
 const notFoundMiddleware = require('./src/middleware/not-found');
 const errorHandlerMiddleware = require('./src/middleware/error-handler');
