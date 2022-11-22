@@ -3,7 +3,7 @@ const dotenv = require('dotenv')
 const cors = require('cors')
 const express = require('express')
 const fileUpload = require('express-fileupload');
-// dotenv.config()
+dotenv.config()
 require('express-async-errors');
 const notFoundMiddleware = require('./src/middleware/not-found');
 const errorHandlerMiddleware = require('./src/middleware/error-handler');
@@ -46,7 +46,7 @@ if(process.env.NODE_ENV === 'production'){
     }); // It refers to any route at all
 }
 
-const PORT = process.env.SERVER_PORT || 5000
+const PORT = process.env.PORT || 5000
 
 const start = () => {
     try {
